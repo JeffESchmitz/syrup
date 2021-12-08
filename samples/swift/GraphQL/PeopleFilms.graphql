@@ -1,0 +1,15 @@
+# Get the person (actor) and associated films by Id
+query PeopleFilms($id: ID) {
+  person(id: $id) {
+    id
+    name
+    filmConnection {
+      films {
+        id
+        title
+        releaseDate
+        director
+      }
+    }
+  }
+}
